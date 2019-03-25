@@ -39,7 +39,17 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
+  const movieNameSearchRevenge = items.filter(function(film) {
+    let upperSearch = search.charAt(0).toUpperCase() + search.substring(1).toLowerCase();
+    let test = film.includes(upperSearch);
+    console.log(film, search, test)
+    if (test == true) {
+      return film;
+    }
+  })
+return movieNameSearchRevenge;
 }
+
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

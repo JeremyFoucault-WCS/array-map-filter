@@ -24,7 +24,20 @@ Sortie attendue:
 
 */
 
+
 function getCampusesTeachingReact(campuses) {
+  let result = campuses.filter(function (school) {
+    if (school.curriculums[0,1] == 'JS/React') {
+      return school;
+    }
+    if (school.curriculums == 'JS/React') {
+      return school;
+    }
+  })
+    const newArr = result.map(function (names) {
+      return names.city;
+  })
+  return newArr;
 }
 
 module.exports = getCampusesTeachingReact;

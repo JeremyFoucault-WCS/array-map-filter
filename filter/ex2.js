@@ -16,7 +16,12 @@ Exemple d'entrée:
  */
 
 function getMultiplesOf(numbers, n) {
+  const numberMultiplOfnum = numbers.filter(function(num) {
+    if (num%n === 0) {
+    return num;
+    }
+  })
+return numberMultiplOfnum;
 }
-
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;
